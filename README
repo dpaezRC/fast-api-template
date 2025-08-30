@@ -1,0 +1,54 @@
+# Configuración del entorno virtual y dependencias
+
+Este proyecto utiliza un **entorno virtual** para manejar sus dependencias de Python.
+
+## 🚀 Pasos para configurar
+
+1. **Crear el entorno virtual**  
+   En la raíz del proyecto, ejecuta:
+
+   ```bash
+   python3 -m venv .venv
+   ```
+
+   > En Windows puede ser `py -m venv .venv`
+
+2. **Activar el entorno virtual**
+
+   - En **Linux / Mac**:
+     ```bash
+     source .venv/bin/activate
+     ```
+
+   - En **Windows (PowerShell)**:
+     ```powershell
+     .venv\Scripts\activate
+     ```
+
+   - En **Windows (CMD)**:
+     ```cmd
+     .venv\Scripts\activate.bat
+     ```
+
+3. **Instalar dependencias**  
+   Una vez activado el entorno virtual, instala las dependencias con:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Verificar instalación**  
+   Puedes comprobar las librerías instaladas con:
+
+   ```bash
+   pip list
+   ```
+
+5. **Desactivar el entorno virtual**  
+   Cuando termines de trabajar, desactiva con:
+
+   ```bash
+   deactivate
+   ```
+
+---
