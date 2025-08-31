@@ -1,7 +1,9 @@
-from fastapi import APIRouter, HTTPException, status
 from typing import List
+
 from bson import ObjectId
-from src.models.product import Product, Category
+from fastapi import APIRouter, HTTPException, status
+
+from src.models.product import Category, Product
 
 router = APIRouter(prefix="/products")
 

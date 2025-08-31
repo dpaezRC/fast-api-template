@@ -1,13 +1,17 @@
-from fastapi import FastAPI
 from contextlib import asynccontextmanager
-from .routes.api import healthcheck, products
+
+from fastapi import FastAPI
+
 from .database import connect_to_database
+from .routes.api import healthcheck, products
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     await connect_to_database()
     yield
     print("Shutting down...")
+
 
 app = FastAPI(lifespan=lifespan)
 

@@ -1,8 +1,9 @@
 from beanie import init_beanie
 from pymongo import AsyncMongoClient
 
-from .config import MONGO_URI
 from src.models.product import Product
+
+from .config import MONGO_URI
 
 
 async def connect_to_database():
