@@ -1,19 +1,15 @@
-from fastapi import FastAPI, APIRouter
 from datetime import datetime
 
+from fastapi import APIRouter
 
-app = FastAPI()
-api_v1 = APIRouter(prefix="/api/v1")
+router = APIRouter(prefix="/healthcheck")
 
 
-@api_v1.get(
-    "/healthcheck",
+@router.get(
+    "/",
     tags=["Healthcheck"],
     summary="Healthcheck endpoint",
     description="Returns the health status of the application.",
 )
 def healthcheck():
     return {"status": "ok", "timestamp": datetime.utcnow().isoformat()}
-
-
-app.include_router(api_v1)
